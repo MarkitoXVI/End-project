@@ -58,6 +58,12 @@ export default function Index({ auth, posts }) {
                                                 >
                                                     Delete
                                                 </button>
+                                                <Link
+                                                    href={route('posts.show', post.id)}
+                                                    className="text-green-500 hover:text-green-700"
+                                                >
+                                                    Show Full Article
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

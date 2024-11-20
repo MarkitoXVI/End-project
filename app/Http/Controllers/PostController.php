@@ -35,6 +35,16 @@ class PostController extends Controller
         return redirect()->route('posts.index');
     }
 
+    public function show(Post $post)
+    {
+        return inertia('Show', [
+            'auth' => auth()->user(),
+            'post' => $post
+        ]);
+
+        return redirect()->route('posts.index');
+    }
+
     public function edit(Post $post)
     {
         return Inertia::render('Posts/Edit', [
